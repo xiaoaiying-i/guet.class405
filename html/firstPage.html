@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="../css/template.css" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>首页-405</title>
+    <link rel="stylesheet" href="../css/firstPage.css" />
+    <script type="text/javascript">
+		window.onload = function(){
+			function $(param){
+				if(arguments[1] == true){
+					return document.querySelectorAll(param);
+				}else{
+					return document.querySelector(param);
+				}
+			}
+			var $box = $(".box");
+			var $box1 = $(".box-1 ul li",true);
+			var $box2 = $(".box-2 ul");
+			var $box3 = $(".box-3");
+			var $length = $box1.length;
+			
+			var str = "";
+			for(var i =0;i<$length;i++){
+				if(i==0){
+					str +="<li class='on'>"+(i+1)+"</li>";
+				}else{
+					str += "<li>"+(i+1)+"</li>";
+				}
+			}
+			$box2.innerHTML = str;
+			
+			var current = 0;
+			
+			var timer;
+			timer = setInterval(go,3000);
+			function go(){
+				for(var j =0;j<$length;j++){
+					$box1[j].style.display = "none";
+					$box2.children[j].className = "";
+				}
+				if($length == current){
+					current = 0;
+				}
+				$box1[current].style.display = "block";
+				$box2.children[current].className = "on";
+				current++;
+			}
+			
+			for(var k=0;k<$length;k++){
+				$box1[k].onmouseover = function(){
+					clearInterval(timer);
+				}
+				$box1[k].onmouseout = function(){
+					timer = setInterval(go,3000);
+				}
+			}
+			for(var p=0;p<$box3.children.length;p++){
+				$box3.children[p].onmouseover = function(){
+					clearInterval(timer);
+				};
+				$box3.children[p].onmouseout = function(){
+					timer = setInterval(go,3000);
+				}
+			}
+			
+			for(var u =0;u<$length;u++){
+				$box2.children[u].index  = u;
+				$box2.children[u].onmouseover = function(){
+					clearInterval(timer);
+					for(var j=0;j<$length;j++){
+						$box1[j].style.display = "none";
+						$box2.children[j].className = "";
+					}
+					this.className = "on";
+					$box1[this.index].style.display = "block";
+					current = this.index +1;
+				}
+				$box2.children[u].onmouseout = function(){
+					timer = setInterval(go,3000);
+				}
+			}
+			
+			$box3.children[0].onclick = function(){
+				back();
+			}
+			$box3.children[1].onclick = function(){
+				go();
+			}
+			function back(){
+				for(var j =0;j<$length;j++){
+					$box1[j].style.display = "none";
+					$box2.children[j].className = "";
+				}
+				if(current == 0){
+					current = $length;
+				}
+				$box1[current-1].style.display = "block";
+				$box2.children[current-1].className = "on";
+				current--;
+			}
+		}
+	</script>
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+	<div class="all_div"><!-- 布局让其随屏幕一样大 -->
+    	<div style="width:1500px; margin:0 auto;"><!-- 内容总长度固定并居于屏幕中间，否侧当窗口收缩时会把内容挤压凌乱-->
+    	<div class="_center">
+            <header>
+                <div class="row1"><!--头部图片行 -->
+                    <a href="../index.html"><img src="../img/405405.png" /></a>
+                    <div>
+                    	<p>
+                        	您好，<a href="login.html" style="color:#06C;">xiaoaixiaoai</a>
+                            <a href="login.html">【登录】</a>&nbsp;&nbsp;
+                            <a href="classCertification.html">【班级认证】</a>
+                        </p><br/>
+                        <form action="#">
+                        	<input class="seach_sub"  type="submit" value="" />
+                            <input class="in_seach" type="text" name="seach_key" placeholder="查询关键字"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="nav"><!--头部导航行-->
+                	<div></div><!--设置分割线-->
+                    <ul>
+                      <li><a style="font-size:22px;" href="firstPage.html">首页</a></li>
+                      <li>
+                      	<a href="introduction.html">班级简介</a>
+                      	<ul>
+                        	<li><a href="introduction.html#class_summary">班级概况</a></li>
+                        	<li><a href="introduction.html#classwd_info">班干信息</a></li>
+                        </ul>
+                      
+                      </li>
+                      <li><a href="classDaily.html">班级日常</a></li>
+                      <li><a href="messageBoard.html">留言板</a></li>
+                      <li><a href="WordChallenge2.html">消磨时间</a></li>
+                    </ul>
+                </div>
+            </header>
+            
+            <div class="center"><!-- 可编辑区域，中间内容部分 -->
+                <!-- InstanceBeginEditable name="content" -->
+            	<div>
+                	<!-- -------------------------------------------------------轮播图 -->
+                    <div class="box">
+                        <div class="box-1">
+                            <ul>
+                                <li>
+                                    <img src="../img/jywmjh3.jpg" alt="这里是第一张图片"></img>
+                                    <h2>这里是第一张图片这里是第一张图片</h2>
+                                </li>
+                                <li>
+                                    <img src="../img/jywmjh2.jpg" alt="这里是第二张图片"></img>
+                                    <h2>这里是第二张图片这里是第二张图片</h2>
+                                </li>
+                                <li>
+                                    <img src="../img/jywmjh6.jpg" alt="这里是第三张图片"></img>
+                                    <h2>这里是第三张图片这里是第三张图片</h2>
+                                </li>
+                                <li>
+                                    <img src="../img/jywmjh7.jpg" alt="这里是第一张图片"></img>
+                                    <h2>这里是第四张图片这里是第四张图片</h2>
+                                </li>
+                                <li>
+                                    <img src="../img/jywmjh5.jpg" alt="这里是第一张图片"></img>
+                                    <h2>这里是第五张图片这里是第五张图片</h2>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box-2"><!-- 用于装切换小圆点 -->
+                        	<ul>
+                            </ul>
+                        </div>
+                        <div class="box-3">
+                            <span class="prev"> < </span>
+                            <span class="next"> > </span>
+                        </div>
+                    </div>
+                    
+                    <!-- -------------------------------------------------------要闻，通知行 -->
+                    <div style="height:470px;margin:30px auto;">
+                    	<div class="class_build">
+                            <div class="class_div_active">班级建设</div>
+                            <center><hr width="100%" align="center" color="#1d6f9f" size=3;></hr></center><br/><!-- 分割线 -->
+                            <div class="listitemimage">
+                                <a href="contentDetailed.html">
+                                    <img src="../img/jychahua2.jpg" />
+                                    <h5>这是简要标题</h5>
+                                    <p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
+                               	</a>
+                            </div>
+                             <div class="listitemimage">
+                                <a href="contentDetailed.html">
+                                    <img src="../img/jychahua4.jpg" />
+                                    <h5>这是简要标题</h5>
+                                    <p>这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏这里是内容超出时自动隐藏</p>
+                               	</a>
+                            </div>
+                             <div class="listitemimage">
+                                <a href="contentDetailed.html">
+                                    <img src="../img/jychahua6.jpg" />
+                                    <h5>这是简要标题</h5>
+                                    <p>这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容</p>
+                               	</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="fenlei">
+                       		<a href="https://www.guet.edu.cn/gdbh/index/xyxw.htm"><div class="fenlei_div">校园热闻</div></a>
+                            <div class="fenlei_div">学院动态</div>
+                            <div class="fenlei_div">班级快讯</div>
+                            <div class="fenlei_div class_div_active">媒体中心</div>
+                            <center><hr width="100%" align="center" color="#1d6f9f" size=3;></hr></center><!-- 分割线 -->
+							<div style=" height:28%;margin-top:20px; border:1px solid #CCC; padding-top:10px;" align="center">
+                                <hr class="hr_tow" style="float:left;">
+                                <span>&nbsp;每日一曲&nbsp;</span>
+                                <hr class="hr_tow" style="float:right;">
+                                <br/><br/>
+                                <audio controls="controls">
+                                  <source height="60%" src="../media/chiling-ran_lafier.mp3" type="audio/mpeg">
+                                </audio>
+                                <p><span style="color:#069;">赤伶-染lafier（翻自 HITA）</span></p>
+                       		</div>
+							<div style=" height:45%; margin-top:20px; border:1px solid #CCC; padding-top:10px;" align="center">
+                                <hr class="hr_tow" style="float:left;">
+                                <span>&nbsp;Video分享&nbsp;</span>
+                                <hr class="hr_tow" style="float:right;">
+                                <br/><br/>
+                                <video width="80%" height="60%" controls>
+                                  <source type="video/mp4" src="../media/qianyuqianxun.mp4">
+                                </video>
+                                <p>标题：<span style="color:#069;">千与千寻</span></p>
+                       		</div>
+                        </div>
+                    
+                    </div>
+                    
+                     <!-- ------------------------------------------------------公告、班级活动行 -->
+                    <div style="height:320px; margin:30px auto;">
+                    	 <!-- 公告公示 -->
+                        <div class="publicity" >
+                        	<div class="class_div_active">班级公告</div>
+                            <div>班级公示</div>
+                            <center><hr width="100%" align="center" color="#1d6f9f" size=3;></hr></center><br/><!-- 分割线 -->
+                        	<ul>
+                            	<li><a href="contentDetailed.html">6-10 405班新一届班干人员公告405班新一届班干人员公告405班新一届班干人员公告</a></li>
+                                <li><a href="contentDetailed.html">6-12 405班新一届班干人员公告405班新一届班干人员</a></li>
+                                <li><a href="contentDetailed.html">6-14 405班新一届班干人员公告405班新一届班干人员公告405班新一届班干人员公告405班新一届班干人员405班新一届班干人员公告405班新一届班干人员公告公告</a></li>
+                                <li><a href="contentDetailed.html">6-15 这是一个标题这是一个标题这是一个标题这是一个标题这是一个标题这是一个标题这是一个标题</a></li>
+                                <li><a href="contentDetailed.html">6-23 405班新一届班干人员公告405班新一届班干人员公告405班新一届班干人员公告405班新一届班干人员405班新一届班干人员公告405班新一届班干人员公告公告</a></li>
+                            </ul>
+                        </div>
+                         <!-- 班级活动 -->
+                        <div class="class_activity">
+                        	<label>班级活动</label>
+                            <a href="#" style="color:#1d6f9f; float:right; margin-top:10px;">更多&gt;&gt;</a>
+                            <center><hr width="100%" align="center" color="#1d6f9f" size=3;></hr></center><br/><!-- 分割线 -->
+                           	<!-- 一个通知 -->
+                            <a href="contentDetailed.html">
+                                <div>
+                                    <img src="../img/advice.jpg" />
+                                    <div >
+                                        <p>标题：关于秋季班级集体秋游活动的相关事项通知</p>
+                                        <p>时间：2019年10月13日</p>
+                                        <p>地点：xxxxxxxxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 一个通知 -->
+                            <a href="contentDetailed.html">
+                                <div>
+                                    <img src="../img/advice.jpg" />
+                                    <div>
+                                        <p>标题 ：关于秋季班级集体秋游活动的相关事项通知</p>
+                                        <p>时间：2019年10月13日</p>
+                                        <p>地点：xxxxxxxxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <!-- 一个通知 -->
+                            <a href="contentDetailed.html">
+                                <div>
+                                    <img src="../img/advice.jpg" />
+                                    <div>
+                                        <p>标题：关于秋季班级集体秋游活动的相关事项通知</p>
+                                        <p>时间：2019年10月13日</p>
+                                        <p>地点：xxxxxxxxxxxxxxxxx</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- ------------------------------------------------------------照片展示行 -->
+                    <div class="photowall">
+                    	<h2>Random display</h2>
+                        <div>
+                            <img src="../img/1.jpg" width="300" height="220">
+                            <h4>完美的星空</h4>
+                            <p>这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字</p>
+                        </div>
+                        <div>
+                            <img src="../img/2.jpg" width="300" height="220">
+                            <h4>海边的黄昏</h4>
+                            <p>这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字</p>
+                        </div>
+                        <div>
+                            <img src="../img/3.jpg" width="300" height="220">
+                            <h4>城市落日余晖</h4>
+                            <p>这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字</p>
+                        </div>
+                        <div>
+                            <img src="../img/4.jpg" width="300" height="220">
+                           	<h4>大海的夜空</h4>
+                            <p>这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字这是一段说明文字</p>
+                        </div>
+                    
+                    </div>
+                  	
+                    
+                
+                </div>
+			<!-- InstanceEndEditable -->
+            </div>
+        </div>
+        
+        <footer><!--尾部-->
+            <div style=" width:100%;height:30px; background:#e4eef7;"></div>
+            <div class="foot_txt">
+                <p>Copyright@归2017级1716040507符金辉所有未经许可不得复制、更改</p>
+                <p>地址：xxxxxxxxxxxxxx&nbsp;&nbsp;邮编:xxxxxx&nbsp;&nbsp;电话:18269684581&nbsp;&nbsp;E-mail:1944408285@qq.com</p>
+            </div>
+            <div style=" width:100%; height:50px; background:#015a84;"></div>
+  		</footer>
+        
+	</div>
+ 
+</body>
+<!-- InstanceEnd --></html>

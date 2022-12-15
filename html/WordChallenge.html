@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WordChallenge</title>
+<link rel="stylesheet" href="../css/WordChallenge.css">
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/WordChallenge.js"></script>
+
+</head>
+<body style="background-color:#5293b9;border-radius:10px;">
+<div align="center">
+    <!--左边-->
+    <div class="left">
+        <div style="width:300px; height:50px; display:inline; color:#F93">
+            <p id="time" style="color:#F93;" ></p><!--当前时间-->
+            <p>共输入：<span id="insum">0</span>&nbsp;次</p>
+            <p>容器内单词数：<span id="container_wdsum">0</span>&nbsp;个</p>
+            <p>页面已停留：<span id="stop_hour">0</span>时<span id="stop_minute">0</span>分<span id="stop_second">0</span>秒</p>
+        </div>
+        <br/><br/>
+        <div style="width:220px;" align="center">
+            <h4>简单说明</h4>
+            <div align="left">
+                本页面可以简单练习英语单词，把待练习的单词文本复制到文本域，点击提交内容，即可在输入框输入单词进行练习。选项栏中可以选择输入单词和单词内容相匹配时,内容中单词的处理方式。<br/>
+                默认处理：不同颜色标识
+            </div>
+        </div>
+    </div>
+    
+    <!--中间部分-->
+    <div class="center">
+        <!--输入框-->
+        <input class="input" id="wd" type="text" autofocus="autofocus" placeholder="输入单词并回车" />
+        <select id="wd_option" name="wd_option" style="border-radius: 8px; height:30px;">
+            <option value="0">--匹配后操作--</option>
+            <option value="1">直接删除单词</option>
+            <option value="2">'--'占位符代替</option>
+            <option value="3">不同颜色标识</option>
+        </select>
+        <input id="conback_wds" type="button" value="内容复原" style="border-radius: 8px; height:30px;"/>
+        <input id="sub_context" type="button" value="提交内容" style="border-radius: 8px; height:30px;"/>
+        <!--单词容器--> 
+        <div id="in_wd" class="in_wd">
+             <input id="clear_in_wd" type="button" style="position: absolute;right: 0;bottom: 0;" value="清空"/>
+        </div>
+        <!--单词内容-->
+        <div  id="wds"  align="left" style="width:100%;font-size:28px;"></div>
+       
+        <!--文本域-->
+        <textarea class="textarea" id="wds_textarea" placeholder="请把要练习的内容复制到这里">
+            alter v 改变 改动 变更
+            burst vi n 突然发生 爆裂
+            dispose vi 除掉 处置 解决 处理
+            blast n 爆炸 气流 vi 炸 炸掉
+            consume v 消耗 耗尽
+            split v 劈开 割裂 分裂 a 裂开的
+            spit v 吐（唾液等） 唾弃
+            spill v 溢出 溅出 倒出
+            slip v 滑动 滑落 忽略
+            lide v 滑动 滑落 n 滑动 滑面 幻灯
+            bacteria n 细菌
+            breed n 种 品种 v 繁殖 产仔
+            budget n 预算 v 编预算 作安排
+            candidate n 候选人
+            campus n 校园
+            liberal a 慷慨的 丰富的 自由的
+            transform v 转变 变革 变换
+            transmit v 传播 播送 传递
+            transplant v 移植
+            transport vat 运输 运送 n 运输 运
+            shift v 转移 转动 转变
+            vary v 变化 改变 使多样化
+            vanish vi 消灭 不见
+            swallow v 吞下 咽下 n 燕子
+            suspicion n 怀疑 疑心
+            suspicious a 怀疑的 可疑的
+            mild a 温暖的 暖和的 温柔的 味淡
+            tender a 温柔的 脆弱的
+            nuisance n 损害 妨害 讨厌的人或
+            insignificant a 无意义的 无足轻重的
+            accelerate vt 加速 促进
+            absolute a 绝对的 无条件的 完全的
+            boundary n 分界线 边界
+            brake n 刹车 制动器 v 刹住车
+            catalog n 目录（册） v 编目
+            vague a 模糊的 不明确的
+            vain n 徒劳 白费
+            extinct a 绝灭的 熄灭的
+            extraordinary a 不平常的 特别的 非凡的
+            extreme a 极度的 极端的 n 极端
+            agent n 代理人 代理商 动因 原因
+            alcohol n 含酒精的饮料 酒精
+            appeal n vi 呼吁 恳求
+            appreciate vt 重视 赏识 欣赏
+            approve v 赞成 同意 批准
+            stimulate vt 刺激 激励
+            acquire vt 取得 获得 学到
+            accomplish vt 完成 到达 实行
+            network n 网状物 广播网 电视网 网络
+            tide n 潮汐
+		 </textarea>
+   </div>
+</div>
+</body>
+</html>
