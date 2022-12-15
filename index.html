@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="./css/welcome.css" />
+<title>桂电北海-网工405-welcome</title>
+</head>
+
+<body>
+
+	<div class="all_div">
+
+        <div class="firstPage" >
+        	<div class="welcome">
+            	<p>Welcome to the website of class 405, network engineering, GUET</p>
+            </div>
+ 			<a href="./html/firstPage.html">
+                <div class="inter" >
+                    <span style="font-size:30px;"><strong>点击进入</strong></span>
+                </div>
+            </a>
+        </div>
+        <div id="div2">
+        	<div class="content_block">
+            	<p>天行健，君子以自强不息</p>
+                <p>地势坤，君子以厚德载物</p>
+            </div>
+        
+        </div>
+        <div id="div3">
+        	<div class="explain">
+             	<h3 style="font-size:30px;">网站简介</h3></br>
+                <p>本站主要参考桂电官网样式设计实现了班级网站。添加了一层欢迎页，然后进入主页面，其次在主页面链接到不同的页面，实现整体效果。首先欢迎页作为了index页，在该页面中主要用三个div层，分别设置不同的背景，第二个背景设置了背景不随屏幕移动（background-attachment: fixed;），形成一种视觉差的效果。以及为了符合不同分辨率的屏幕通过弹性盒子flex和媒体查询@media做了一下响应式布局。但后面的页面中没有实现响应式布局。</p>
+                <p>首页参照桂电官网排版设置简单做了一个logo和页头的文字。背景设置了部分颜色渐变（background: linear-gradient(to bottom, #014b88 0%,#f4f8fb 40%)）。如果在最外层div设置宽度为100%，那当窗口缩小时，容器也会跟着缩小，这时内容就会收到挤压而凌乱不堪。如果固定宽度，当在小屏幕查看时，无法查看全全部内容，在更大屏幕展示时，由于最外层宽度已经固定了，如果内容容器宽度不够窗口的宽度大就会空出一部分。为了适应在更高分辨率的屏幕下，背景仍是铺满整个窗口，但内容始终保持在窗口中间，进行了这样的设置。用两个div作为最外层容器，最外面的宽度设置为100%，里面的宽度固定并让其居于最外层的中间。当铺满变大时就不会空出一部分了，但由于不是响应式布局，内容容器固定了宽度，所以窗口宽度小于内容宽度时，部分也一样看不全，只能拖动滑动条查看。</p>
+                <p>在主页面中可以点击logo和页头标题文字返回欢迎页。首页轮播图主要通过js实现，班级建设卡片块缩放效果主要是css过渡实现，在firstPage.css中有注释。校园热闻直接通过a标签链接到桂电北海官网校园新闻页。其次就是班干卡片和人气卡片的设计实现，班级日常导航中人气卡片通过伪类选择器hover控制，鼠标移动到卡片div上，隐藏里面的头像图片和文字说明并添加背景图片设置背景尺寸xy都是100%，样式在css.css文件。班干卡片翻转效果主要通过变形和过渡实现，样式在css.css文件有说明。</p>
+				<p>为了日后实现更好的效果，简单制作了登录和认证界面。然后班级简介的多级导航只简单使用了一下锚点连接。由于需要在其他页面点击导航也能跳转到对应的锚点位置，所以导航里的a连接需要用一个完整的路径加上锚点名称，如果只设置锚点名称，那链接只在班级简介即锚点所在页起作用。消磨时间模块主要在wordChallenge2.html文件中通过iframe简单引入了之前通过jquery制作的个人练习单词小页面。</p>
+            </div>
+            <p class="foot_txt">1716040507&nbsp;&copy;&nbsp;符金辉</p>
+        </div>
+    
+
+    </div>
+
+	
+</body>
+</html>
