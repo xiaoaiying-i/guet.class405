@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+body,html{height:100%;}
+ul{list-style: none;}
+a{ text-decoration:none; color:#000;}
+
+.all_div{
+	width:100%;
+	background: linear-gradient(to bottom, #014b88 0%,#f4f8fb 40%);/*设置背景渐变：渐变范围从上到下百分之30*/
+}
+
+._center{
+	/*头部和内容用同一个div装起来，宽度设置80%，内容设置居中*/
+	width:80%;
+	margin:0 auto;
+}
+
+/*头部logo和搜索块样式*/
+.row1{
+	height:120px;
+}
+.row1 img{/*logo样式浮动居左*/
+	float:left;
+}
+.row1 div{/*搜索块内容浮动居右*/
+	float:right;
+	margin-top:20px;
+	text-align:right;
+}
+.row1 div p a{
+	color:#FFF;
+	font-size:18px;
+}
+.in_seach{/*seach_sub搜索输入框样式*/
+	width:260px;
+	height:30px;
+	float:right;
+	padding-left:10px;
+}
+.seach_sub{/*头部搜索提交按钮样式*/
+	width:30px;
+	height:33px;
+	float:right;
+	background:url(../img/search16px.png) no-repeat;
+	background-position:center center;
+	border:1px solid #FFF;
+	
+}
+/*头部导航栏样式设置*/
+.nav{
+	/*导航div的样式*/
+	height:80px;
+	/*border:2px solid red;*/
+}
+.nav div{/*导航栏分割线样式*/
+	height:10px;
+	background:url(../img/fenge1.png) no-repeat center center;
+	
+}
+.nav ul li {
+	float: left;
+	display:flex;
+	position:relative;
+}
+.nav ul li a{
+	display:block;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size:18px;
+	color:#FFF;
+	/*border:1px solid blue;*/
+}
+.nav ul li a:hover{/*鼠标移动到li上面时修改背景颜色*/
+	background:#004473;
+	color:#fff;
+}
+.nav ul li ul{/*二级导航*/
+	display:none;
+	margin:40px 0 2px 0px;
+	Z-index:10000;/*设置覆盖顺序，使其置于最上层*/
+}
+.nav ul li:hover ul{
+	display:block;/*鼠标移动到有二级导航的li：显示二级导航*/
+	position:absolute;
+	top:0;
+}
+.nav ul li ul li {
+	float:none;
+	margin-top:2px;
+}
+.nav ul li ul li a{
+	width:100px;
+	display:block;
+	font-size:16px;
+	background-color:rgba(0,153,204,0.6); /*背景色有点透明的效果*/
+	color:#000;
+	margin
+}
+
+
+/*中间内容样式*/
+.center{
+	color:#000;
+	overflow:auto;
+	/*border:2px solid blue;*/
+}
+
+/*尾部文字div样式*/
+.foot_txt{
+	width:100%;
+	height:100px; 
+	text-align:center; 
+	color:#FFF; 
+	background-image: linear-gradient(to top,#4080a4,#a3bdca);
+	padding-top:20px; 
+	box-sizing:border-box;"
+}

@@ -1,0 +1,392 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0;}
+a{text-decoration: none;}
+li{list-style: none}
+/*==================================================================登录页css样式*/
+/*----------------------------------------------------------------input输入框修改提示字体默认颜色样式*/
+input::-webkit-input-placeholder { 
+	color:#333;
+}
+input: -moz-placeholder { 
+	color:#333 ;
+}
+input::-moz-placeholder { 
+	color:#333;
+}
+input: -ms-input-placeholder {
+	color:#333;
+}
+/*登录块div样式*/
+.login_div{
+	height:600px; 
+	border-radius:10px;
+	background:url(../img/login405bg.jpg) no-repeat;
+}
+.login_tit{/*登录logo和标题样式*/
+	width:70%; 
+	margin:0px auto; 
+	/*border:1px solid #0C0;*/
+}
+.login_tit div{/*登录标题样式*/
+	height:50px; 
+	line-height:50px; 
+	border-left: 3px solid #FFF; 
+	float:left; 
+	margin-left:20px; 
+	padding-left:20px; 
+	font-size:30px;"
+}
+
+/*登录通知块div样式*/
+.login_notice{
+	width:560px; 
+	height:340px; 
+	border-radius:8px; 
+	background-color:rgba(39,29,23,0.4); 
+	text-align:center;
+	padding-top:20px;
+	float:left;
+	color:#d9d9d9;
+	box-sizing:border-box;
+	
+}
+
+/*登录账号密码块样式*/
+.login{
+	width:360px; 
+	height:340px; 
+	border-radius:8px; 
+	background-color:rgba(39,29,23,0.4); 
+	text-align:center;
+	padding-top:20px;
+	float:right;
+	color:#d9d9d9;
+	box-sizing:border-box;
+	
+}
+.login input{/*账号密码等输入框样式*/
+	width:200px;
+	height:30px;
+	border-radius:12px;
+	color:#000;
+	margin-top:20px;
+	padding-left:30px;
+	border:1px solid #fff;
+	box-sizing:border-box;
+}
+.login img{/*验证码图片样式*/
+	width:75px; 
+	height:30px; 
+	margin:20px 0 0 20px; 
+	border:1px solid #fff; 
+	border-radius:12px; 
+	float:right;
+}
+
+/*==================================================================班级认证页css样式*/
+.certification_tit{/*班级认证欢迎标题样式*/
+	width:80%;
+	border-radius:10px;
+	margin:0 auto;
+	
+}
+.certification_tit div{/*认证标题div样式*/
+	height:50px; 
+	line-height:50px; 
+	border-left: 3px solid #FFF; 
+	float:left; 
+	margin-left:20px; 
+	padding-left:20px; 
+	font-size:30px;
+	
+}
+
+.certification{/*班级认证中间背景微透div块样式*/
+	width:480px; 
+	height:380px;
+	margin:0 auto;
+	border-radius:8px; 
+	background-color:rgba(39,29,23,0.4); 
+	text-align:center;
+	padding-top:20px;
+	box-sizing:border-box;
+	color:#d9d9d9;
+}
+.certification input{/*班级认中input样式*/
+	width:200px;
+	height:30px;
+	border-radius:12px;
+	color:#000;
+	margin-top:20px;
+	padding-left:30px;
+	border:1px solid #fff;
+	box-sizing:border-box;
+}
+
+/*==================================================================班级简介页css样式*/
+/*----------------------------------------------------------------班级简介-班级概述样式*/
+.class_summary{/*班级概况div样式*/
+	height:700px;
+	text-align:center;
+}
+.class_summary label{/*班级概况小标题样式*/
+	font-size:25px;
+	color:#2e353f;
+}
+.class_summary p{/*班级概况文字样式*/
+	width:95%;
+	margin:0 auto;
+	text-align:left;
+	font-size:18px;
+	line-height:30px;
+	text-indent: 2em;/*段落空两格*/
+	margin-bottom:10px;
+	text-align: justify;/*文本两端对齐*/
+	text-justify: inter-character;/*文本两端对齐，中文也起作用*/
+}
+/*----------------------------------------------------------------班级简介-班干信息样式*/
+.classwd_info{/*班干信息总div样式*/
+	text-align:center;
+}
+.classwd_info label{/*班干信息小标题样式*/
+	font-size:25px;
+	color:#2e353f;
+}
+.info_container{/*班干卡片总div样式*/
+	position:relative;
+	width:98%;
+	margin:0 auto;/*居中*/
+	padding-bottom:50px;
+	display:flex;/*弹性盒子布局*/
+	flex-wrap:wrap;/*可换行*/
+	justify-content:center;/*两端对齐*/
+}
+.info_card{/*班干信息小卡片样式*/
+	width: 250px;
+	height:230px;
+	margin:10px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align: center;
+	position: relative;
+ }
+.info_text{
+	padding: 20px;
+}
+.zh,.fan {/*正反面统一样式*/
+	width:100%;
+	height:100%;
+	text-align: center;
+	transition: all 2s;
+	backface-visibility: hidden;
+	/*正反面居于相同位置*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.info_card img{
+	width:100%;
+	height:70%;
+}
+.fan {/*反面特有样式*/
+	background:url(../img/x3.jpg);
+	background-size:100% 100%;
+	padding-top:10px;
+	transform: rotateY(-180deg) rotateZ(-180deg);/* 背面先旋转负180度为不可见 */
+}
+.fan p{/*班干卡下简介p标签样式*/
+	text-align:left;
+	font-size:15px;
+	margin:10px;
+	line-height:20px;
+	text-align: justify;/*文本两端对齐*/
+	text-justify: inter-character;/*文本两端对齐，中文也起作用*/
+}
+.info_card:hover .zh {/*鼠标移动到：正面以y和z轴旋转180度*/
+	transform: rotateY(180deg) rotateZ(180deg);
+}
+.info_card:hover .fan {
+	transform: rotateY(0) rotateZ(0);
+}
+
+/*==================================================================班级日常页css样式*/
+/*----------------------------------------------------------------班级日常导航css样式*/
+.towLi{/*装导航ul的div css样式*/
+	width:100%;
+	height:40px;
+	font-size:16px;
+	margin:0 auto;
+	box-sizing:border-box;
+	/*border:1px solid red;*/
+}
+.towLi ul{/*班级日常下导航条ul样式*/
+	width:1200px;
+}
+.towLi ul li{
+	width:290px;
+	height:35px;
+	line-height:35px;
+	float:left;
+	text-align:center;
+	border-right:2px solid #CCC;/*添加右边框来起到分割效果*/
+}
+.towLi ul li div a{
+	color:#fff;/*导航字体设置为白色*/
+}
+.towLi li div:hover{/*通过div添加下边框来显示当前选中*/
+	width:80px;
+	height:35px;
+	float:left;
+	text-align:center;
+	color:#0068b7;
+	border-bottom:3px solid #0068b7;
+	margin-left:110px;
+	
+}
+.div_active{/*被选中导航让其div添加下边框线来表示当前位置*/
+	width:80px;
+	height:35px;
+	text-align:center;
+	color:#0068b7;
+	border-bottom:3px solid #0068b7;
+	margin-left:110px;
+}
+.towLi li:last-child{border-right:none;}
+
+/*----------------------------------------------------------------每周之星css样式*/
+.contextBlack{/*总div样式*/
+	height:1000px;
+	background:#FFF;
+	margin:20px auto;
+	padding-top:20px;
+	background:url(../img/x4.jpg) no-repeat;
+	border-radius:20px;
+	box-shadow:0px 0px 15px #888888; 
+	
+}
+.content_firstText{/*标题样式*/
+	width:80%;
+	height:100px;
+	line-height:100px;
+	margin-top:10px;
+	background:url(../img/embedded_bg4.png) no-repeat;
+	background-size:100% 100%;
+	background-position:center; 
+	font-size:40px;
+	color:#069;
+	/*border:1px solid red;*/
+}
+.content_block{/*卡片总div样式*/
+	width:85%;
+	height:75%;
+	box-shadow:0px 0px 15px #888888; 
+	border-radius:20px;
+	padding-top:15px;
+	padding-bottom:45px;
+	display:flex;
+	justify-content:space-around;
+}
+.flex_ul{
+	width:80%;
+	height:100%;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	/*border:1px solid red;*/
+}
+.content_block ul li{/*每个卡片*/
+	height:350px;
+	margin-top:30px;
+	box-sizing:border-box;
+	border-radius:20px;
+	box-shadow:0px 0px 15px #888888; 
+	border:1px solid #999;		
+}
+.content_block ul li img{/*卡片中头像img的样式*/
+	margin-top:20px;
+	width:100px;
+	height:100px;
+	border-radius:50%;/*角度弧度为50%即把元素变为圆形*/
+	box-shadow:0px 0px 15px #888888;/*增加阴影*/
+}
+.content_block li div{/*卡片即li下每个div的css样式*/
+	width:250px;
+	height:100%;
+	text-align:center;
+	background:url(../img/jbs_bj.jpg) no-repeat;
+	/*background-size:100% 100%;*/
+	border-radius:20px;
+}
+.content_block li p:nth-child(2){/*名片第一个p标签样式*/
+	margin-top:25px;
+	font-size:22px;
+}
+.content_block li p:nth-child(3){/*名片第二个p标签样式*/
+	margin:10px 15px 0px 15px;
+	font-size:15px; 
+	text-align:justify;
+	line-height:25px;"
+}
+.content_block li div:hover img{display:none;}/*当鼠标移动到对应的卡片上把头像和文字隐藏*/
+.content_block li div:hover p{display:none;}
+.rwbj1:hover{/*卡片1背景*/
+	background:url(../img/rwbj1.jpg) no-repeat;
+	background-size:100% 100%;
+	border:1px solid red;
+}
+.rwbj2:hover{/*卡片2背景*/
+	background:url(../img/rwbj2.jpg) no-repeat;
+	background-size:100% 100%;
+	border:1px solid red;
+}
+.rwbj3:hover{/*卡片3背景*/
+	background:url(../img/rwbj3.jpg) no-repeat;
+	background-size:100% 100%;
+	border:1px solid red;
+}
+.rwbj4:hover{/*卡片4背景*/
+	background:url(../img/rwbj4.jpg) no-repeat;
+	background-size:100% 100%;
+	border:1px solid red;
+}
+.rwbj5:hover{/*卡片5背景*/
+	background:url(../img/rwbj5.jpg) no-repeat;
+	background-size:100% 100%;
+	border:1px solid red;
+}
+.rwbj6:hover{/*卡片6背景*/
+	background:url(../img/rwbj6.jpg) no-repeat;
+	background-size:100% 100%;
+	border:1px solid red;
+}
+
+/*==================================================================内容详情页（contentDetailed.html）css样式*//
+.detailed{/*总div样式*/
+	width:100%;
+	text-align:center;
+}
+.detailed img{
+	margin:0 auto;
+	display: block;
+}
+.detailed label{/*标题样式*/
+	display:block;
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	font-size:25px;
+	color:#2e353f;
+}
+.detailed p{/*文字样式*/
+	width:95%;
+	margin:0 auto;
+	text-align:left;
+	font-size:18px;
+	line-height:30px;
+	text-indent: 2em;
+	margin-bottom:10px;
+	text-align: justify;/*文本两端对齐*/
+	text-justify: inter-character;/*文本两端对齐，中文也起作用*/
+}

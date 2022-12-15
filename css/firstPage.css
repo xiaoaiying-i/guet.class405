@@ -1,0 +1,290 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding: 0;margin: 0;}
+li{list-style: none;}
+a{text-decoration: none;color: black;}
+
+/*----------------------------------------------------------------关于轮播图的css样式*/
+.box{
+	width:100%;
+	height: 400px;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.box-1 ul li{
+	width: 100%;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+.box-1 ul li img{
+	width: 100%; 
+	height: 400px;
+}
+.box-1 ul li h2{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width:100%;
+	height: 40px;
+	background: rgba(125,125,120,.4);
+	text-indent: 2em;
+	padding-right:500px ;
+	font-size: 15px;
+	line-height: 40px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-weight: normal;
+	color: ghostwhite;
+}
+.box-2{
+	position: absolute;
+	right: 10px;
+	bottom: 14px;
+}
+.box-2 ul li{
+	float:left;
+	width: 12px;
+	height: 12px;
+	overflow: hidden; 
+	margin: 0 5px; 
+	border-radius: 50%;
+	background: rgba(0,0,0,0.5);
+	text-indent: 100px;
+	cursor: pointer; /* 光标呈现为指示链接的手型指针*/
+}
+.box-2 ul .on{
+	background: rgba(255,255,255,0.6);
+}
+.box-3 span{
+	color: white;
+	background: rgba(125,125,120,.3);
+	width: 50px;
+	height: 80px;
+	position: absolute;
+	top:50%; font-family: "宋体";
+	line-height: 80px;
+	font-size:60px;
+	margin-top: -40px;
+	text-align: center;
+	cursor: pointer;
+}
+.box-3 .prev{
+	left: 10px;
+}
+.box-3 .next{
+	right: 10px;
+}
+.box-3 span::selection{
+	background: transparent;
+}
+.box-3 span:hover{
+	background: rgba(125,125,120,0.8);
+}
+
+/*----------------------------------------------------------------班级建设行样式*/
+.class_build{
+	width:60%; 
+	height:100%; 
+	color:#000;
+	padding:0px 20px 0px 20px;
+	float:left;
+	box-sizing:border-box;
+	/*border:1px solid red; */
+}
+.class_build div{/*班级建设div内每一小块的样式*/
+	width:30%; 
+	height:360px;
+	float:left;/*让div可以在同一行*/
+	text-align: center;
+	margin-left:20px;
+	box-sizing:border-box;
+	border:1px solid #CCC;
+	box-shadow:0 0 9px #CCC;/*添加阴影增加效果*/
+}
+.class_build div a img{/*班级建设每一小块里的图片样式*/
+	width:85%; 
+	height:130px;
+	box-sizing:border-box;
+	margin:10px 0 10px 0;
+	
+}
+.class_build div a p{/*班级建设每一小块里文字简介的样式*/
+	width:85%; 
+	height:140px;
+	margin:10px 10px 0 10px;
+	color:#000;
+	font-size:15px;
+	text-align: justify;/*文本两端对齐*/
+	text-justify: inter-character;/*文本两端对齐，中文也起作用*/
+	display: -webkit-box;/*p标签超出多行后省略*/
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 7;/*超出几行后省略*/
+	overflow: hidden;
+}
+.class_build div a p:hover{
+	color:#C33;
+}
+.class_build div:first-child{/*班级建设上面蓝色框样式*/
+	width:300px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#1c81c5;
+	font-size:16px;
+	float:left;
+	margin:10px 3px 10px 0px;
+}
+
+.fenlei{/*公示公告切换总div样式*/
+	width:37%; 
+	height:100%; 
+	float:right;
+	color:#000;
+	text-align:center;
+	padding:0px 20px 0px 20px;
+	box-sizing:border-box;
+	/*border:1px solid blue; */
+}
+.fenlei_div{/*公示公告切换块*/
+	width:90px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#1c81c5;
+	font-size:16px;
+	float:left;
+	margin:10px 3px 10px 0px;
+}
+.fenlei_div:hover{ background:#09C; color:#FFF;}
+
+.hr_tow{/*两边水平线中间文字样式*/
+	width:35%;
+	margin-top:9px;
+}
+
+/*----------------------------------------------------------------公示公告行样式*/
+/*左边样式*/
+.publicity{/*公告公示总div样式*/
+	width:46%; 
+	height:100%; 
+	float:left;
+	color:#000;
+	margin-left:20px;
+}
+.publicity div{/*公示公告切换块*/
+	width:140px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#1c81c5;
+	font-size:16px;
+	float:left;
+	margin:10px 3px 10px 0px;
+}
+.publicity div:hover{ background:#09C; color:#FFF;}
+.publicity ul li{/*公示公告里每个li即每个公告样式*/
+	overflow:hidden;/*超出部分隐藏并用...代替*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-bottom:10px;
+}
+.publicity ul li a:hover{
+	color:#C33;
+}
+
+/*右边相关样式*/
+.class_activity{/*班级活动总div样式*/
+	width:46%; 
+	height:100%; 
+	float:right;
+	margin-right:20px;
+}
+.class_activity label{/*班级活动总div样式*/
+	display:inline-block;
+	height:30px;
+	color:#1d6f9f; 
+	font-size:18px; 
+	margin:10px 20px 10px 10px;
+}
+
+.class_activity div{/*每个班级活动样式*/
+	height:20%;
+	color:#000;
+	margin-bottom:10px;
+}
+.class_activity div img{/*每个班级活动图片样式*/
+	height:60px;
+	margin:0px 20px 0px 20px;
+	float:left;
+	box-sizing:border-box;
+}
+.class_activity div div{/*每个班级活动标题和时间地点样式*/
+	height:60px;
+	float:left; 
+	font-size:16px;
+	box-sizing:border-box;
+}
+.class_activity div div:hover{
+	color:#C33;
+}
+.class_div_active{/*选中状态*/
+	background:#09C; 
+	color:#FFF;
+}
+
+
+/*过度样式：放大*/
+.listitemimage{
+	transition:all 0.5s;
+}
+.listitemimage:hover{
+	transform:scale(1.1);
+}
+
+/*----------------------------------------------------------------关于底部照片展示块的样式*/
+.photowall{/*整个div样式*/
+	height:450px;
+	background:url(../img/jbs_bj.jpg) no-repeat;
+	background-size:100% 100%;
+	text-align:center;
+	display:flex;
+	justify-content: space-between;
+}
+.photowall h2{/*左边标题样式*/
+	font-size:35px;
+	margin:10px auto ;
+}
+.photowall div{/*每个图片以及标题内容的一个div样式*/
+	width:22%;
+	position: relative;
+	background-color:#f2eada;
+	margin: 5px;
+	padding:10px 10px 20px 10px;
+	text-align: center;
+	font-size:20px;
+	box-shadow:.2em .2em .8em #130c0e; /*给照片添加阴影效果，富有立体感*/
+	float:left;
+}
+.photowall img{/*每个展示图片样式*/
+	width:90%;
+	height:200px;
+}
+.photowall h4{/*图片下标题样式*/
+	color:#000;
+}
+.photowall p{/*图片下说明简介样式*/
+	margin-top:5px;  /*设置照片内显示文字段落的外上边距*/
+	color:#000;
+	font-size:15px;
+	text-align: justify;/*文本两端对齐*/
+	text-justify: inter-character;/*文本两端对齐，中文也起作用*/
+}
+
+
+
+
+
