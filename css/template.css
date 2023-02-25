@@ -2,12 +2,18 @@
 /* CSS Document */
 *{ margin:0; padding:0;}
 body,html{height:100%;}
+html {
+	
+}
 ul{list-style: none;}
 a{ text-decoration:none; color:#000;}
 
 .all_div{
 	width:100%;
-	background: linear-gradient(to bottom, #014b88 0%,#f4f8fb 40%);/*设置背景渐变：渐变范围从上到下百分之30*/
+	min-width:1500px;
+    /*设置背景渐变：渐变范围从上到下百分之40*/
+	background: linear-gradient(to bottom, #014b88 0%,#f4f8fb 40%);
+	background-repeat-y: no-repeat
 }
 
 ._center{
